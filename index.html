@@ -1,0 +1,67 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <!-- Customized css -->
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-static-top nav-header">Firebase Roshambo</nav>
+  <div class="container">
+    <!-- User Name input and display section-->
+    <div class="row">
+      <div class="form-group col-xs-4 col-xs-offset-4">
+        <label for="user-name">Your Name</label>
+        <input class="form-control" id="user-name" type="text" />
+        <button class="btn btn-primary" id="submit-name" type="submit">Submit</button>
+      </div>
+    </div>
+    
+    <!-- Roshambo Section-->
+    <div class="row roshambo-container">
+      <div id="user-section" class="col-xs-4 roshambo-card">
+        <div id="user-selections">
+        </div>
+        <div id="user-choice">
+        </div>
+        <div id="user-status">
+        </div>
+      </div>
+      <div id="result-section" class="col-xs-4 roshambo-card"></div>
+      <div id="opponent-sections" class="col-xs-4 roshambo-card">
+        <div id="opponent-selection">
+        </div>
+        <div id="opponent-choice">
+        </div>
+        <div id="opponent-status">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Message Section-->
+    <div class="row">
+      <div id="message-section" class="col-xs-4 col-xs-offset-4">
+        
+        <div class="form-group">
+          <label for="new-message">messages</label>
+          <input class="form-control" id="new-message" type="text" />
+          <button class="btn btn-primary" id="submit-message" type="submit">Submit</button>
+        </div>
+        <div id="latest-messages"></div>
+      </div>
+    </div>
+    
+  </div>
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.6/lodash.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+  <script src="./assets/javascript/config/firebase_config.js"></script>
+  <script src="./assets/javascript/constants.js"></script>
+  <script src="./assets/javascript/utils.js"></script>
+  <script src="./assets/javascript/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+body {
+  text-align: center;
+}
+
+input {
+  margin: 5px;
+}
+
+.roshambo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.roshambo-card {
+  border: 1px solid black;
+  height: 80%;
+  margin: 10px;
+}
+
+.rashambo-icon {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+}
+
+/*
+.rashmbo-icon:hover {
+  -webkit-filter: blur(20px); filter: blur(20px);
+  -webkit-filter: brightness(0.25); filter: brightness(0.25);
+}
+*/
+ul.rashambo-icon-container {
+  display: flex;
+  height: 60%;
+}
+li.rock {
+  background-image: url("../images/rock.png");
+  align-self: flex-start;
+}
+li.paper {
+  background-image: url("../images/paper.png");
+  align-self: flex-end;
+}
+li.scissors {
+  background-image: url("../images/scissors.png");
+  align-self: flex-start;
+}
+
+#user-choice, #user-status, #opponent-choice, #opponent-status {
+  
+}
+
+#latest-messages{
+  overflow-y: scroll;
+}
