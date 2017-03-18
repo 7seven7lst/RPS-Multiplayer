@@ -2,10 +2,31 @@ body {
   text-align: center;
   background-image: url("../images/background.png");
   background-size: cover;
+  font-family: 'Merriweather', serif;
+}
+
+nav.roshambo-nav {
+  padding-top: 1%;
+  font-size: 30px;
+  background-color: #b493ed;
+  color: #aaef4a;
+  text-shadow: 2px 2px grey;
 }
 
 input {
   margin: 5px;
+  filter: drop-shadow(5px 5px 5px);
+}
+
+input.form-control {
+  border-radius: 0px; /* over-rides twitter bootstrap */
+}
+
+.roshambo-button {
+  border-radius: 0px;
+  color: white;
+  background-color: #f4a142;
+  filter: drop-shadow(5px 5px 5px);
 }
 
 .roshambo-container {
@@ -16,11 +37,16 @@ input {
   height: 300px;
 }
 
+#user-selections-container {
+  height: 60%;
+}
+
 .roshambo-card {
   border: 1px solid black;
   height: 80%;
   margin: 10px;
   background-color: #FFF;
+  filter: drop-shadow(5px 5px 5px);
 }
 
 .rashambo-icon {
@@ -28,22 +54,21 @@ input {
   width: 100px;
   height: 100px;
   background-size: cover;
+  cursor:pointer;
 }
 
-/*
-.rashmbo-icon:hover {
-  -webkit-filter: blur(20px); filter: blur(20px);
-  -webkit-filter: brightness(0.25); filter: brightness(0.25);
-}
-*/
+
 ul.rashambo-icon-container {
+  margin-top: 5px;
   display: flex;
-  height: 60%;
+  height: 100%;
 }
+
 li.rock {
   background-image: url("../images/rock.png");
   align-self: flex-start;
 }
+
 li.paper {
   background-image: url("../images/paper.png");
   align-self: flex-end;
@@ -55,11 +80,18 @@ li.scissors {
 
 #user-info {
   display: flex;
-  flex-direction: row;
-  height: 40%;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  height: 35%;
   width: 100%;
 }
-#user-choice, #user-status, #opponent-choice, #opponent-status {
+
+#user-choice, #opponent-choice {
+  align-self: center;
+  width: 100%;
+  display: block;
+}
+#user-status, #opponent-status {
   align-self: flex-end;
   width: 100%;
   display: block;
@@ -67,4 +99,29 @@ li.scissors {
 
 #latest-messages{
   overflow-y: scroll;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  #user-selections {
+    height: 50%;
+  }
+  .rashambo-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .roshambo-container {
+    height: 150px;
+  }
+  #user-selections {
+    height: 35%;
+  }
+  .rashambo-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
 }

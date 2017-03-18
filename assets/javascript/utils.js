@@ -38,9 +38,12 @@ const generateRPSSelections = ($target) => {
 }
 
 const findUserIndex = (name, userArray) => {
+  if (!name ){
+    return;
+  }
   let index;
   _.forEach(userArray, (user, i)=>{
-    if (name === user.name ) {
+    if (name === _.get(user,'name',null)) {
       index = i;
     }
   });
