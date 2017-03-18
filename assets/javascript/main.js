@@ -109,7 +109,7 @@ $(document).ready(function(){
 
         gameTurnsRef.set(turns);
         $opponentChoice.text("");
-        $resultSection.html(`<p>You choose ${userData.choice}</p><p>${opponentData.name} choose ${opponentData.choice}</p><p>${turnResult}</p>`)
+        $resultSection.html(`<div style="align-self: center;width: 100%;"><p>You choose ${userData.choice}</p><p>${opponentData.name} choose ${opponentData.choice}</p><p>${turnResult}</p></div>`)
         $userStatus.text(`win: ${userData.wins}, loss: ${userData.losses}`);
         $opponentStatus.text(`win: ${opponentData.wins}, loss: ${opponentData.losses}`)
         setTimeout(function(){
@@ -126,7 +126,6 @@ $(document).ready(function(){
     }
   })
 
-
   playersRef.on("child_removed", function(snapshot){
     let playerQuit = snapshot.val();
     let name = playerQuit.name;
@@ -135,10 +134,7 @@ $(document).ready(function(){
     gameTurnsRef.set(turns);
   });
 
-
-
   messagesRef.orderByChild("dateAdded").limitToLast(10).on("value", function(snapshot){
-
     let messages = snapshot.val();
     $latestMessages.empty();
     _.forEach(messages, message=>{

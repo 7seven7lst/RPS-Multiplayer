@@ -1,5 +1,7 @@
 body {
   text-align: center;
+  background-image: url("../images/background.png");
+  background-size: cover;
 }
 
 input {
@@ -18,6 +20,7 @@ input {
   border: 1px solid black;
   height: 80%;
   margin: 10px;
+  background-color: #FFF;
 }
 
 .rashambo-icon {
@@ -50,8 +53,16 @@ li.scissors {
   align-self: flex-start;
 }
 
+#user-info {
+  display: flex;
+  flex-direction: row;
+  height: 40%;
+  width: 100%;
+}
 #user-choice, #user-status, #opponent-choice, #opponent-status {
-  
+  align-self: flex-end;
+  width: 100%;
+  display: block;
 }
 
 #latest-messages{
